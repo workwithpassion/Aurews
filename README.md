@@ -1,5 +1,3 @@
-# aurews
-Repo project ie104
 # INTERNATIONAL ECO AND BUS NEWS: AUREWS
 
 ## INTRODUCTION
