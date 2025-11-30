@@ -1,3 +1,4 @@
+/* TICKER */
 .ticker-container {
     margin: 0 auto;
     max-width: 1440px;
@@ -14,20 +15,12 @@
     width: max-content;
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
 
-    to {
-        transform: translateX(-50%);
-    }
-}
 
 .ticker-wrapper:hover {
     animation-play-state: paused;
 }
-
+/* STOCL */
 .stock-item {
     display: flex;
     align-items: center;
@@ -70,7 +63,7 @@
     font-size: 14px;
     color: #333;
 }
-
+/* Style cho price */
 .price-change {
     font-size: 13px;
     margin-left: 4px;
@@ -165,18 +158,6 @@
     /* Chrome, Safari, Opera */
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -261,6 +242,30 @@
     stroke-width: 2;
 }
 
+/* KEYFRAME */
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* || MEDIA QUERIES */
 @media (max-width: 768px) {
     .modal-content {
         padding: 24px;
