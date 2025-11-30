@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleNav();
 
     document.querySelector(".nav__search").addEventListener("click", () => {
-      window.location.href = "./Search.html";
+      window.location.href = "./search.html";
     });
     document.querySelector(".nav__about").addEventListener("click", () => {
       window.location.href = "./about.html";

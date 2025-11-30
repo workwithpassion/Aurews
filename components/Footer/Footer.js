@@ -67,12 +67,5 @@ document.addEventListener("DOMContentLoaded", () => {
   if (container) {
     console.log("Loaded");
     container.innerHTML = createFooter();
-    // toggleNav();
-    // document.querySelector(".nav__search").addEventListener("click", () => {
-    //   window.location.href = "./Search.html";
-    // });
-    // document.querySelector(".nav__about").addEventListener("click", () => {
-    //   window.location.href = "./about.html";
-    // });
   }
 });
