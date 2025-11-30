@@ -24,7 +24,6 @@ export function toggleMenu() {
 
   mobileMenu.classList.toggle("active");
   overlay.classList.toggle("active");
-  // Prevent body scroll when menu is open
 }
 
 // Set active class cho mobile menu dựa trên URL hiện tại (giống toggleNav)
@@ -95,9 +94,9 @@ function initMobileMenuLinks() {
     // Set URL nếu href là "#" hoặc rỗng
     if (!currentHref || currentHref === "#" || currentHref.trim() === "") {
       if (linkText === "Home") {
-        link.setAttribute("href", "./Index.html");
+        link.setAttribute("href", "./index.html");
       } else if (linkText === "Contact") {
-        link.setAttribute("href", "./Contact.html");
+        link.setAttribute("href", "./contact.html");
       } else {
         // Lấy type từ mapping - normalize "Money & Markets" to "Money and Markets"
         let mappedType = typeMapping[linkText];
@@ -108,7 +107,7 @@ function initMobileMenuLinks() {
         if (mappedType) {
           link.setAttribute(
             "href",
-            `./Category.html?type=${encodeURIComponent(mappedType)}`
+            `./category.html?type=${encodeURIComponent(mappedType)}`
           );
         }
       }
@@ -157,7 +156,6 @@ function initMobileMenu() {
           if (overlay) overlay.classList.remove("active");
           document.body.style.overflow = "";
         }
-
         // Navigate after menu closes
         setTimeout(() => {
           window.location.href = href;

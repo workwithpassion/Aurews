@@ -7,8 +7,10 @@ function openPopup(tab) {
 
   if (popupOverlay) popupOverlay.classList.add("active");
   if (mainContent) mainContent.classList.add("blur");
-  document.body.style.overflow = "hidden";
-  switchTab(tab);
+  const mobileMenu = document.querySelector('.mobile-menu.active');
+  mobileMenu.style.top = `-100%`;
+
+  // Lưu vị trí scroll hiện tại
 }
 
 // Đóng popup và xóa blur
@@ -18,7 +20,8 @@ function closePopup() {
 
   if (popupOverlay) popupOverlay.classList.remove("active");
   if (mainContent) mainContent.classList.remove("blur");
-  document.body.style.overflow = "visible";
+  const mobileMenu = document.querySelector('.mobile-menu.active');
+  mobileMenu.style.top = `0`;
 }
 
 // Đóng popup khi click vào overlay
@@ -212,7 +215,7 @@ function handleDashboardClick() {
 
 // Navigate to add post page
 function handleAddPostClick() {
-  window.location.href = "./addPost.html";
+  window.location.href = "./addpost.html";
 }
 
 // Xử lý logout
@@ -224,8 +227,8 @@ function setupLogoutButton() {
       alert("You have been logged out!");
 
       const pathname = window.location.pathname || window.location.href;
-      if (pathname.includes("addPost.html")) {
-        window.location.href = "Index.html";
+      if (pathname.includes("addpost.html")) {
+        window.location.href = "index.html";
       } else {
         window.location.reload();
       }
@@ -355,7 +358,7 @@ function clickAddPostButton() {
 //             <div id="addpost-button" class="mobile-menu-footer-item">Add Post</div>
 //         `;
 //         document.getElementById('addpost-button').addEventListener('click', () => {
-//             window.location.href = './addPost.html';
+//             window.location.href = './addpost.html';
 //         });
 //     }
 

@@ -202,7 +202,7 @@
 
 .smallnews__img {
     width: 100%;
-    aspect-ratio: 262/150;
+    aspect-ratio: 262/200;
     background-color: #D9D9D9;
     flex-shrink: 0;
     gap: 20px;
@@ -217,7 +217,7 @@
 }
 
 .smallnewsfirst {
-    padding-right: 80px;
+    padding-right: 15px;
     cursor: pointer;
     transition: opacity 0.3s ease;
 }

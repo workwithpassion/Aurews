@@ -18,7 +18,7 @@ function convertNewsDataToArticles() {
             readTime: '5 min',
             image: resolveImagePath(item.image),
             type: type,
-            url: `Post.html?id=${item.id}` // URL thực tế của bài viết
+            url: `post.html?id=${item.id}` // URL thực tế của bài viết
         };
     }
 
@@ -333,7 +333,7 @@ function renderArticles(articles) {
         // Click handler để mở liên kết bài viết
         card.onclick = function () {
             // Sử dụng URL từ article hoặc tạo URL dựa trên ID
-            const articleUrl = article.url || `Post.html?id=${article.id}`;
+            const articleUrl = article.url || `post.html?id=${article.id}`;
             window.location.href = articleUrl;
         };
 

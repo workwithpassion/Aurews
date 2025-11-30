@@ -3,7 +3,7 @@ function injectStyle() {
 
   const link = document.createElement("link");
   link.id = "pop-up-overlay-style";
-  link.href = "../assets/css/login.css";
+  link.href = "../components/PopUpOverlay/login.css";
   link.rel = "stylesheet";
   document.head.appendChild(link);
 }
