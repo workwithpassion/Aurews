@@ -1,15 +1,15 @@
 function injectStyle() {
-    if (document.getElementById("pop-up-overlay-style")) return;
+  if (document.getElementById("pop-up-overlay-style")) return;
 
-    const link = document.createElement("link");
-    link.id = "pop-up-overlay-style";
-    link.href = "../assets/css/login.css";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
+  const link = document.createElement("link");
+  link.id = "pop-up-overlay-style";
+  link.href = "../components/PopUpOverlay/login.css";
+  link.rel = "stylesheet";
+  document.head.appendChild(link);
 }
 function createPopUpOverlay() {
-    injectStyle();
-    return `
+  injectStyle();
+  return `
     <div class="popup-overlay" id="popupOverlay" onclick="closePopupOnOverlay(event)">
         <div class="popup-content" onclick="event.stopPropagation()">
             <button class="close-btn" onclick="closePopup()">&times;</button>
@@ -72,10 +72,10 @@ function createPopUpOverlay() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("pop-up-overlay__placeholder");
-    if (container) {
-        container.innerHTML = createPopUpOverlay();
-        saveSignUp();
-        Login();
-    }
+  const container = document.getElementById("pop-up-overlay__placeholder");
+  if (container) {
+    container.innerHTML = createPopUpOverlay();
+    saveSignUp();
+    Login();
+  }
 });

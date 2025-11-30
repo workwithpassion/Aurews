@@ -1,7 +1,7 @@
 import { fullNews } from "./addPost.js";
-import { createArticleCard } from "../../components/Category/articleCard.js";
+import { createArticleCard } from "../../components/Category/ArticleCard/articleCard.js";
 // import { createTrendingCard } from "../../components/Category/trendingCard.js";
-import { createRelatedCard } from "../../components/Category/relatedCard.js";
+import { createRelatedCard } from "../../components/Category/RelatedCard/relatedCard.js";
 import { toggleMenu } from "./header.js";
 const subtitle = {
   latest: "Breaking stories, updated live.",

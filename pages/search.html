@@ -1,198 +1,215 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurews</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/general.css" />
+    <link rel="stylesheet" href="../assets/css/search.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="stylesheet" href="../assets/css/login.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurews</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/general.css">
-  <link rel="stylesheet" href="../assets/css/search.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- <link rel="stylesheet" href="../assets/css/login.css"> -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
-</head>
+  <body>
+    <div id="page-overlay"></div>
+    <!-- ======================= -->
+    <!-- sign-up, sign in -->
+    <!-- ======================= -->
+    <!-- Pop-up Overlay -->
+    <div id="pop-up-overlay__placeholder"></div>
 
-<body>
-  <div id="page-overlay"></div>
-  <!-- ======================= -->
-  <!-- sign-up, sign in -->
-  <!-- ======================= -->
-  <!-- Pop-up Overlay -->
-  <div id="pop-up-overlay__placeholder"></div>
+    <div id="mainContent">
+      <header>
+        <!-- Navigation -->
+        <div id="navbar__placeholder"></div>
+        <div id="mobile-menu__placeholder"></div>
+      </header>
 
-  <div id="mainContent">
-    <header>
-      <!-- Navigation -->
-      <div id="navbar__placeholder"></div>
-      <div id="mobile-menu__placeholder"></div>
-    </header>
-
-    <main>
-      <!-- Search Section -->
-      <div class="search-section">
-        <div class="search-header">
-          <h1>Search for</h1>
-        </div>
-        <!-- Search Box -->
-        <div class="search-box">
-          <div class="search-input-wrapper">
-            <div class="search-input-container">
-              <input type="text" class="search-input" id="searchInput"
-                placeholder="Search for articles, news, and more..." autocomplete="off">
-              <button class="clear-input-btn" id="clearInputButton" type="button">
-                &times;
+      <main>
+        <!-- Search Section -->
+        <div class="search-section">
+          <div class="search-header">
+            <h1>Search for</h1>
+          </div>
+          <!-- Search Box -->
+          <div class="search-box">
+            <div class="search-input-wrapper">
+              <div class="search-input-container">
+                <input
+                  type="text"
+                  class="search-input"
+                  id="searchInput"
+                  placeholder="Search for articles, news, and more..."
+                  autocomplete="off"
+                />
+                <button
+                  class="clear-input-btn"
+                  id="clearInputButton"
+                  type="button"
+                >
+                  &times;
+                </button>
+              </div>
+              <!-- Search Button -->
+              <button class="search-btn" id="searchButton" type="button">
+                <i class="fas fa-search"></i> Search
               </button>
-            </div>
-            <!-- Search Button -->
-            <button class="search-btn" id="searchButton" type="button">
-              <i class="fas fa-search"></i> Search
-            </button>
-            <!-- Search Suggestions -->
-            <div class="search-suggestions" id="searchSuggestions">
-              <div class="suggestions-layout">
-                <div class="suggestion-section">
-                  <!-- Recent Searches -->
-                  <div class="suggestion-section-header">
-                    <div class="suggestion-section-header-text">
-                      <i class="fas fa-history"></i>Recent Searches
+              <!-- Search Suggestions -->
+              <div class="search-suggestions" id="searchSuggestions">
+                <div class="suggestions-layout">
+                  <div class="suggestion-section">
+                    <!-- Recent Searches -->
+                    <div class="suggestion-section-header">
+                      <div class="suggestion-section-header-text">
+                        <i class="fas fa-history"></i>Recent Searches
+                      </div>
                     </div>
+                    <div
+                      class="suggestion-list"
+                      id="recentSuggestionsList"
+                    ></div>
                   </div>
-                  <div class="suggestion-list" id="recentSuggestionsList"></div>
-                </div>
-                <div class="suggestion-section">
-                  <!-- Popular Searches -->
-                  <div class="suggestion-section-header">
-                    <div class="suggestion-section-header-text">
-                      <i class="fas fa-fire"></i>Popular Searches
+                  <div class="suggestion-section">
+                    <!-- Popular Searches -->
+                    <div class="suggestion-section-header">
+                      <div class="suggestion-section-header-text">
+                        <i class="fas fa-fire"></i>Popular Searches
+                      </div>
                     </div>
+                    <div
+                      class="suggestion-list"
+                      id="popularSuggestionsList"
+                    ></div>
                   </div>
-                  <div class="suggestion-list" id="popularSuggestionsList"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Filters -->
-        <div class="filters-container">
-          <button class="filters-btn" id="toggleFiltersBtn">
-            <i class="fas fa-filter"></i>Advanced Search
-            <span class="filters-count" id="activeFiltersCount"></span>
-          </button>
-          <!-- Filters Dropdown -->
-          <div class="filters-dropdown" id="filtersDropdown">
-            <div class="filter-group">
-              <!-- Content Type Filter -->
-              <label class="filter-label">Content Type:</label>
-              <select class="filter-select" id="contentTypeFilter">
-                <option value="">All</option>
-                <option value="article">Article</option>
-                <option value="video">Video</option>
-                <option value="podcast">Podcast</option>
-                <option value="image">Image</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <!-- Category Filter -->
-              <label class="filter-label">Category:</label>
-              <select class="filter-select" id="categoryFilter">
-                <option value="">All Categories</option>
-                <option value="Latest">Latest</option>
-                <option value="Business News">Business News</option>
-                <option value="Money and Markets">Money & Markets</option>
-                <option value="Tech and Innovation">Tech & Innovation</option>
-                <option value="A.I.">A.I.</option>
-                <option value="Lifestyle">Lifestyle</option>
-                <option value="Politics">Politics</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <!-- Date Filter -->
-              <label class="filter-label">Date Range:</label>
-              <select class="filter-select" id="dateFilter">
-                <option value="">All Time</option>
-                <option value="today">Today</option>
-                <option value="week">This Week</option>
-                <option value="month">This Month</option>
-                <option value="year">This Year</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <!-- Search In Filter -->
-              <label class="filter-label">Filter By:</label>
-              <select class="filter-select" id="searchInFilter">
-                <option value="all">All</option>
-                <option value="keyword">Keyword Only</option>
-                <option value="headline-body">Headline & Body</option>
-                <option value="author">Author Only</option>
-              </select>
-            </div>
-
-            <!-- Clear All Filters Button -->
-            <button class="clear-all-filters-btn" id="clearAllFiltersBtn">
-              <i class="fas fa-redo"></i> Clear All Filters
+          <!-- Filters -->
+          <div class="filters-container">
+            <button class="filters-btn" id="toggleFiltersBtn">
+              <i class="fas fa-filter"></i>Advanced Search
+              <span class="filters-count" id="activeFiltersCount"></span>
             </button>
+            <!-- Filters Dropdown -->
+            <div class="filters-dropdown" id="filtersDropdown">
+              <div class="filter-group">
+                <!-- Content Type Filter -->
+                <label class="filter-label">Content Type:</label>
+                <select class="filter-select" id="contentTypeFilter">
+                  <option value="">All</option>
+                  <option value="article">Article</option>
+                  <option value="video">Video</option>
+                  <option value="podcast">Podcast</option>
+                  <option value="image">Image</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <!-- Category Filter -->
+                <label class="filter-label">Category:</label>
+                <select class="filter-select" id="categoryFilter">
+                  <option value="">All Categories</option>
+                  <option value="Latest">Latest</option>
+                  <option value="Business News">Business News</option>
+                  <option value="Money and Markets">Money & Markets</option>
+                  <option value="Tech and Innovation">Tech & Innovation</option>
+                  <option value="A.I.">A.I.</option>
+                  <option value="Lifestyle">Lifestyle</option>
+                  <option value="Politics">Politics</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <!-- Date Filter -->
+                <label class="filter-label">Date Range:</label>
+                <select class="filter-select" id="dateFilter">
+                  <option value="">All Time</option>
+                  <option value="today">Today</option>
+                  <option value="week">This Week</option>
+                  <option value="month">This Month</option>
+                  <option value="year">This Year</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <!-- Search In Filter -->
+                <label class="filter-label">Filter By:</label>
+                <select class="filter-select" id="searchInFilter">
+                  <option value="all">All</option>
+                  <option value="keyword">Keyword Only</option>
+                  <option value="headline-body">Headline & Body</option>
+                  <option value="author">Author Only</option>
+                </select>
+              </div>
+
+              <!-- Clear All Filters Button -->
+              <button class="clear-all-filters-btn" id="clearAllFiltersBtn">
+                <i class="fas fa-redo"></i> Clear All Filters
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Results Section -->
-      <div class="results-section">
-        <div class="results-header">
-          <!-- Results Info -->
-          <div class="results-info">
-            <span id="resultsCount"><strong>0</strong> results</span>
+        <!-- Results Section -->
+        <div class="results-section">
+          <div class="results-header">
+            <!-- Results Info -->
+            <div class="results-info">
+              <span id="resultsCount"><strong>0</strong> results</span>
+            </div>
+            <!-- Sort Dropdown -->
+            <div class="sort-wrapper">
+              <!-- Sort by -->
+              <label for="sortDropdown" class="sort-label">Sort by:</label>
+              <select class="sort-dropdown" id="sortDropdown">
+                <option value="relevance">Relevance</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="popular">Most Popular</option>
+              </select>
+            </div>
           </div>
-          <!-- Sort Dropdown -->
-          <div class="sort-wrapper">
-            <!-- Sort by -->
-            <label for="sortDropdown" class="sort-label">Sort by:</label>
-            <select class="sort-dropdown" id="sortDropdown">
-              <option value="relevance">Relevance</option>
-              <option value="newest">Newest</option>
-              <option value="oldest">Oldest</option>
-              <option value="popular">Most Popular</option>
-            </select>
+
+          <!-- Articles Grid -->
+          <div class="articles-grid" id="articlesGrid">
+            <!-- Articles will be dynamically inserted here -->
           </div>
-        </div>
 
-        <!-- Articles Grid -->
-        <div class="articles-grid" id="articlesGrid">
-          <!-- Articles will be dynamically inserted here -->
-        </div>
+          <!-- Loading State -->
+          <div class="loading" id="loadingState" style="display: none">
+            <i class="fas fa-spinner"></i>
+            <p style="margin-top: 20px; color: #666">Loading results...</p>
+          </div>
 
-        <!-- Loading State -->
-        <div class="loading" id="loadingState" style="display: none">
-          <i class="fas fa-spinner"></i>
-          <p style="margin-top: 20px; color: #666">Loading results...</p>
-        </div>
-
-        <!-- No Results -->
-        <div class="no-results" id="noResults" style="display: none">
-          <!-- <i class="fas fa-search"></i>
+          <!-- No Results -->
+          <div class="no-results" id="noResults" style="display: none">
+            <!-- <i class="fas fa-search"></i>
                 <h2>No Results Found</h2>
                 <p>Try adjusting your search or filters to find what you're looking for.</p> -->
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <!-- Footer -->
-    <div id="footer__placeholder"></div>
-  </div>
-  <script type="module" src="../components/Navbar.js"></script>
-  <script src="../assets/js/login.js"></script>
-  <script src="../components/PopUpOverlay.js"></script>
-  <script type="module" src="../components/Footer.js"></script>
-  <script type="module" src="../components/MobileMenu.js"></script>
-  <script src="../assets/js/overlay.js"></script>
-  <script type="module" src="../assets/js/search.js"></script>
-  <script type="module" src="../assets/js/header.js"></script>
-</body>
-
+      <!-- Footer -->
+      <div id="footer__placeholder"></div>
+    </div>
+    <script type="module" src="../components/Navbar/Navbar.js"></script>
+    <script src="../assets/js/login.js"></script>
+    <script src="../components/PopUpOverlay/PopUpOverlay.js"></script>
+    <script type="module" src="../components/Footer/Footer.js"></script>
+    <script type="module" src="../components/MobileMenu/MobileMenu.js"></script>
+    <script src="../assets/js/overlay.js"></script>
+    <script type="module" src="../assets/js/search.js"></script>
+    <script type="module" src="../assets/js/header.js"></script>
+  </body>
 </html>
