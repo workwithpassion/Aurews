@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/general.css">
   <link rel="stylesheet" href="../assets/css/index.css">
-  <link rel="stylesheet" href="../assets/css/banner.css">
   <!-- <link rel="stylesheet" href="../assets/css/login.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,58 +33,7 @@
       <div id="navbar__placeholder"></div>
     </header>
     <main>
-      <div class="ticker-container">
-        <div class="ticker-wrapper" id="tickerWrapper"></div>
-      </div>
-      <!-- Modal -->
-      <div class="modal" id="stockModal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div>
-              <div class="modal-title" id="modalSymbol"></div>
-            </div>
-            <button class="modal-close-btn" onclick="closeModal()">×</button>
-          </div>
-
-          <div class="detail-section">
-            <div class="big-price" id="modalBigPrice"></div>
-            <div class="big-change" id="modalBigChange"></div>
-          </div>
-
-          <div class="chart-container">
-            <svg class="large-chart" id="largeChart" viewBox="0 0 500 180">
-              <path id="largeChartPath" d="M0,0"></path>
-            </svg>
-          </div>
-
-          <div class="detail-section">
-            <div class="detail-row">
-              <span class="detail-label">Opening Price</span>
-              <span class="detail-value" id="modalOpen"></span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Highest Price</span>
-              <span class="detail-value" id="modalHigh"></span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Lowest Price</span>
-              <span class="detail-value" id="modalLow"></span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Volume</span>
-              <span class="detail-value" id="modalVolume"></span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Market Cap</span>
-              <span class="detail-value" id="modalMarketCap"></span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">P/E Ratio</span>
-              <span class="detail-value" id="modalPE"></span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="banner__placeholder"></div>
       <!-- MAIN TOPIC -->
       <div class="maintopic__container">
         <div class="left">
@@ -309,7 +257,7 @@
   <script type="module" src="../components/Footer/Footer.js"></script>
   <script src="../assets/js/overlay.js"></script>
   <script src="../assets/js/index.js" type="module"></script>
-  <script src="../assets/js/banner.js"></script>
+   <script type="module" src="../components/Banner/Banner.js"></script>
   <script src="../assets/js/header.js" type="module"></script>
 </body>
 
