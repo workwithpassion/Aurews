@@ -1,3 +1,4 @@
+/* BACKGROUND */
 .background__title {
   padding-left: clamp(15px, 6.944vw, 100px);
   padding-right: clamp(15px, 6.944vw, 100px);
@@ -12,7 +13,7 @@
   font-size: 20px;
   height: auto;
 }
-
+/* TITLE */
 .title__container {
   margin: 0 auto;
   max-width: 1440px;
@@ -256,19 +257,13 @@
   gap: 30px;
 }
 
-/* =================================== */
-/* TỪ 1200PX TRỞ XUỐNG */
-/* =================================== */
+/* || MEDIA QUERIES */
 @media (max-width: 1200px) {
   .footer__newsletter {
     flex: 1;
     min-width: 300px;
   }
 }
-
-/* =================================== */
-/* TỪ 1024PX TRỞ XUỐNG */
-/* =================================== */
 @media (max-width: 1024px) {
   .news__container {
     flex-direction: column;
@@ -299,12 +294,8 @@
   }
 }
 
-/* =================================== */
-/* TỪ 768PX TRỞ XUỐNG */
-/* =================================== */
 @media (max-width: 768px) {
 
-  /* Các quy tắc đã được gộp từ 3 khối 768px */
   .background__title {
     padding-left: clamp(10px, 4vw, 20px);
     padding-right: clamp(10px, 4vw, 20px);
@@ -324,7 +315,6 @@
     padding: 0 15px;
   }
 
-  /* ĐÃ THAY THẾ .category__header */
   .title__container {
     padding-bottom: 20px;
   }
@@ -367,9 +357,6 @@
   }
 }
 
-/* =================================== */
-/* TỪ 500PX TRỞ XUỐNG */
-/* =================================== */
 @media (max-width: 500px) {
   .background__title {
     padding-left: 15px;
@@ -390,9 +377,6 @@
   }
 }
 
-/* =================================== */
-/* TỪ 480PX TRỞ XUỐNG */
-/* =================================== */
 @media (max-width: 480px) {
   .background__title {
     padding-left: 15px;
@@ -492,9 +476,6 @@
   }
 }
 
-/* =================================== */
-/* TỪ 360PX TRỞ XUỐNG */
-/* =================================== */
 @media (max-width: 360px) {
   #category-title {
     font-size: 20px;

@@ -318,7 +318,7 @@
     height: 60px;
     margin-top: 30px;
 }
-
+/* || MEDIA QUERIES */
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
